@@ -137,9 +137,7 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <!-- <video id="teaser" autoplay muted loop playsinline height="100%"> -->
-        <!-- <img source src="./data/method_viz/Splash GIF.gif" /> -->
-        <video id="dinov2_gardens" autoplay controls muted loop playsinline height="100%">
+        <video id="robohop_vid" autoplay controls muted loop playsinline height="100%">
           <source src="./data/RoboHop_anon_video_website_1_compressed.mp4"
                   type="video/mp4">
         </video>
@@ -149,6 +147,24 @@
       </h2>
     </div>
   </div>
+</section>
+
+<section class="hero is-light">
+  <div class="hero-body">
+  <!-- Paper video. -->
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-three-fifths">
+      <h2 class="title is-3">Perturbed Initializations</h2>
+      <video id="robohop_vid_init" autoplay controls muted loop playsinline height="100%">
+        <source src="./data/robohop_varyInit_with_markers.mp4"
+                type="video/mp4">
+      </video>
+    <h2 class="subtitle has-text-centered">
+      The underlying object-level reasoning of <span class="coolname">RoboHop</span> enables robustness to perturbations in its initialization. The robot is able to reach its destination ("ladder") despite variations in the viewpoint of its source node ("white triangular machine", please refer to the explainer video above for more details).
+    </h2>
+  </div>
+  </div>
+
 </section>
 
 <section class="hero is-small is-light">
@@ -161,7 +177,7 @@
         <div class="content has-text-justified">
           <p>
             Mapping is crucial for spatial reasoning, planning and robot navigation. Existing approaches range from metric, which require precise geometry-based optimization, to purely topological, where image-as-node based graphs lack explicit object-level reasoning and interconnectivity. In this paper, we propose a novel topological representation of an environment based on <i>image segments</i>, which are semantically meaningful and open-vocabulary queryable, conferring several advantages over previous works based on pixel-level features. Unlike 3D scene graphs, we create a purely topological graph but with segments as nodes, where edges are formed by <i>a)</i> associating segment-level descriptors between pairs of consecutive images and <i>b)</i> connecting neighboring segments within an image using their pixel centroids. This unveils a continuous sense of a `place', defined by inter-image persistence of segments along with their intra-image neighbours. It further enables us to represent and update segment-level descriptors through neighborhood aggregation using graph convolution layers, which improves robot localization based on segment-level retrieval. 
-            Using real-world data, we show how our proposed mapping can be used to generate navigation plans and actions in the form of <i></i>hops over segment tracks</i>, directly from natural language queries. Furthermore, we quantitatively analyze data association at the segment level, which underpins inter-image connectivity during mapping and segment-level localization when revisiting the same place. Finally, we show preliminary trials on segment-level `hopping' based zero-shot real-world navigation.
+            Using real-world data, we show how our proposed map representation can be used to <i>i)</i> generate navigation plans in the form of <i>hops over segments</i> and <i>ii)</i> search for target objects using natural language queries describing spatial relations of objects. Furthermore, we quantitatively analyze data association at the segment level, which underpins inter-image connectivity during mapping and segment-level localization when revisiting the same place. Finally, we show preliminary trials on segment-level `hopping' based zero-shot real-world navigation.
           </p>
         </div>
       </div>
